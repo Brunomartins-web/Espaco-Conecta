@@ -1,0 +1,234 @@
+:root{
+    --primary-color: #E0712B;
+    --secondary-color: #1D1D1D;
+    --text-color: #FFFFFF;
+    --background-color: #000000;
+    --font-family: "arimo", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #080809;
+    font-family: var(--font-family);
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* LADO ESQUERDO */
+.form-area {
+    width: 50%;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+/* LOGO */
+.nav-logo img {
+    width: 90px;
+    margin-bottom: 40px;
+}
+
+/* TITULO */
+h1 {
+    margin-bottom: 30px;
+}
+
+/* FORM */
+form {
+    width: 100%;
+    max-width: 375px;
+}
+
+/* CAMPOS */
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.campo label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.campo input {
+    background: transparent;
+    border: 1px solid #aaa;
+    padding: 12px;
+    color: #fff;
+    outline: none;
+    border-radius: 8px;
+}
+
+/* LEMBRAR-ME */
+.termos-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.termos-login label {
+    font-size: 12px;
+    display: flex;
+    gap: 5px;
+}
+
+
+/* BOTÃO */
+.inputSubmit{
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+
+    background-color: #D9D9D9;
+    color: #000;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.inputSubmit:hover{
+    background-color: #E0712B;
+    color: #FFF;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 0 15px rgba(224,113,43,.4);
+}
+
+.link-msg{
+    padding-top: 5px;
+    font-size: 12px;
+    color: #aaa;
+    text-decoration: none;
+}
+
+
+/* LINK */
+form a {
+    font-size: 12px;
+    color: #aaa;
+    text-decoration: none;
+}
+
+/* LADO DIREITO */
+.image-area {
+    width: 50%;
+    height: 100vh;
+
+    background: url("../../assets/img/IMLogin.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.image-area::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.03);
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1024px){
+
+    .form-area{
+        padding: 30px;
+    }
+
+    .image-area{
+        width: 45%;
+    }
+}
+
+/* TABLETS */
+@media (max-width: 768px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    .form-area{
+        width: 100%;
+        min-height: 100vh;
+        padding: 40px 25px;
+    }
+
+    .image-area{
+        width: 100%;
+        height: 300px;
+    }
+
+    form{
+        max-width: 100%;
+    }
+
+    .form-area button{
+        max-width: 100%;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 480px){
+
+    .form-area{
+        padding: 30px 20px;
+    }
+
+    .nav-logo img{
+        width: 70px;
+        margin-bottom: 25px;
+    }
+
+    h1{
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .campo input{
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .termos-login{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .form-area button{
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .image-area{
+        height: 220px;
+    }
+}
